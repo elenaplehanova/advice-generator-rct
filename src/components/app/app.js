@@ -1,5 +1,16 @@
+import "./app.scss";
+import Header from "../header/header";
+import Main from "../main/main";
+import Footer from "../footer/footer";
+
 const App = () => {
-    return <p>App component!</p>;
+    return (
+        <div>
+            <Header />
+            <Main />
+            <Footer />
+        </div>
+    );
 };
 
 export default App;
