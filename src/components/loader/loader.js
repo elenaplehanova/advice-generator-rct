@@ -2,11 +2,9 @@ import "./loader.scss";
 
 const Loader = () => {
     return (
-        <div>
-            <div className="loadingio-spinner-eclipse-v5egcuyz0ca">
-                <div className="ldio-f3vn535d8af">
-                    <div></div>
-                </div>
+        <div className="spinner spinner_smal">
+            <div className="spinner-eclipse spinner-eclipse_rotating">
+                <div className="spinner-eclipse__lines spinner-eclipse__lines_lilac"></div>
             </div>
         </div>
     );

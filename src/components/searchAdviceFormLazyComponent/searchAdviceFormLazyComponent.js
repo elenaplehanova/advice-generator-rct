@@ -32,27 +32,28 @@ const SearchAdviceFormLazyComponent = () => {
     };
 
     return (
-        <div>
-            <form id="search-form">
+        <div className="search-advice">
+            <form className="search-advice__form">
                 <input
+                    className="search-advice__input"
                     type="search"
-                    id="search-query"
                     placeholder="Type a word..."
                     value={searchQuery}
                     onChange={(e) => {
                         setSearchQuery(e.currentTarget.value);
                     }}
                 />
-                <button id="search-button" type="submit" onClick={handleSubmit}>
+                <button className="search-advice__button" type="submit" onClick={handleSubmit}>
                     Search
                 </button>
             </form>
 
             {isSearched ? (
-                <>
-                    {message && <p>{message} </p>}
-                    <div className="swiperContainer">
+                <div className="search-results">
+                    {message && <p className="search-results__error-message">{message} </p>}
+                    <div className="swiper-container">
                         <Swiper
+                            className="swiper"
                             slidesPerView={1}
                             spaceBetween={30}
                             keyboard={{
@@ -63,17 +64,16 @@ const SearchAdviceFormLazyComponent = () => {
                             }}
                             navigation={true}
                             modules={[Keyboard, Pagination, Navigation]}
-                            className="mySwiper"
                         >
                             {foundAdvices &&
                                 foundAdvices.map(({ id, advice }) => (
-                                    <SwiperSlide key={id}>
-                                        <p>{advice}</p>
+                                    <SwiperSlide className="swiper-slide" key={id}>
+                                        <p className="swiper-slide__text">{advice}</p>
                                     </SwiperSlide>
                                 ))}
                         </Swiper>
                     </div>
-                </>
+                </div>
             ) : (
                 <Loader />
             )}
