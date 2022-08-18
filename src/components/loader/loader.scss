@@ -1,5 +1,4 @@
 .spinner {
-
     &_smal {
         width: 54px;
         height: 54px;
@@ -9,7 +8,6 @@
 }
 
 .spinner-eclipse {
-
     &_rotating {
         width: 100%;
         height: 100%;
@@ -20,7 +18,6 @@
     }
 
     &__lines {
-
         &_lilac {
             position: absolute;
             animation: eclipse-rotating 1.31s linear infinite;
@@ -38,14 +35,14 @@
 
 @keyframes eclipse-rotating {
     0% {
-        transform: rotate(0deg)
+        transform: rotate(0deg);
     }
 
     50% {
-        transform: rotate(180deg)
+        transform: rotate(180deg);
     }
 
     100% {
-        transform: rotate(360deg)
+        transform: rotate(360deg);
     }
 }
