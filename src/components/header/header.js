@@ -2,11 +2,9 @@ import "./header.scss";
 
 const Header = () => {
     return (
-        <h1>
-            Your <em>Adviser</em>
-            <br></br>
-            _____________________________________________________________________
-        </h1>
+        <div className="header">
+            <div className="header__title title">Your Adviser</div>
+        </div>
     );
 };
 

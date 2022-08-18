@@ -11,7 +11,11 @@ const RandomAdviceLazyComponent = () => {
         });
     }, []);
 
-    return <>{randomAdvice ? <p>{randomAdvice}</p> : <Loader />} </>;
+    return (
+        <div className="random-advice">
+            {randomAdvice ? <p className="random-advice__text">{randomAdvice}</p> : <Loader />}
+        </div>
+    );
 };
 
 export default RandomAdviceLazyComponent;

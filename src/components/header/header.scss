@@ -1,0 +1,21 @@
+.header {
+    &__title {
+        margin: 20px auto;
+        text-align: center;
+    }
+}
+
+.title {
+    font-size: 34px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 8.95px;
+
+    &::after {
+        content: "";
+        height: 1px;
+        left: 50%;
+        background-color: #000;
+        display: block;
+    }
+}

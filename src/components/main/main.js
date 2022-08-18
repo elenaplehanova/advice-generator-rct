@@ -13,7 +13,7 @@ const SearchAdviceFormLazyComponent = lazy(() =>
 
 const Main = () => {
     return (
-        <main>
+        <main className="main">
             <Tabs>
                 <TabList>
                     <Tab>Random advice</Tab>
