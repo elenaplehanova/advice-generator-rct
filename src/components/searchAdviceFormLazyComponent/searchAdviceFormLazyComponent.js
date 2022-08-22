@@ -3,6 +3,7 @@ import ApiService from "../../services/api.service";
 import Loader from "../loader/loader";
 import { Keyboard, Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import AdviceForm from "../adviceForm/adviceForm";
 
 import "swiper/scss";
 import "swiper/scss/navigation";
@@ -68,7 +69,8 @@ const SearchAdviceFormLazyComponent = () => {
                             {foundAdvices &&
                                 foundAdvices.map(({ id, advice }) => (
                                     <SwiperSlide className="swiper-slide" key={id}>
-                                        <p className="swiper-slide__text">{advice}</p>
+                                        <p> </p>
+                                        <AdviceForm adviceText={advice} />
                                     </SwiperSlide>
                                 ))}
                         </Swiper>

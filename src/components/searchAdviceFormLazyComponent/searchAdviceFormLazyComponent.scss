@@ -1,15 +1,17 @@
 .search-advice {
+    &__form {
+    }
 
-    &__form {}
+    &__input {
+    }
 
-    &__input {}
-
-    &__button {}
+    &__button {
+    }
 }
 
 .search-results {
-
-    &__error-message {}
+    &__error-message {
+    }
 }
 
 .swiper-container {
@@ -24,13 +26,11 @@
 }
 
 .swiper-slide {
+    height: 100px;
     text-align: center;
     font-size: 18px;
 
-    /* Center slide text vertically */
     display: flex;
     justify-content: center;
     align-items: center;
-
-    &__text {}
 }

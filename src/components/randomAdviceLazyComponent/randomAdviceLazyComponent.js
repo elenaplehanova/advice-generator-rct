@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import ApiService from "../../services/api.service";
-import "./randomAdviceLazyComponent.scss";
 import Loader from "../loader/loader";
+import AdviceForm from "../adviceForm/adviceForm";
+
+import "./randomAdviceLazyComponent.scss";
 
 const RandomAdviceLazyComponent = () => {
     const [randomAdvice, setRandomAdvice] = useState();
@@ -12,8 +14,12 @@ const RandomAdviceLazyComponent = () => {
     }, []);
 
     return (
-        <div className="random-advice">
-            {randomAdvice ? <p className="random-advice__text">{randomAdvice}</p> : <Loader />}
+        <div>
+            {randomAdvice ? (
+                <AdviceForm className="advice-form" adviceText={randomAdvice} />
+            ) : (
+                <Loader />
+            )}
         </div>
     );
 };
