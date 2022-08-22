@@ -69,7 +69,6 @@ const SearchAdviceFormLazyComponent = () => {
                             {foundAdvices &&
                                 foundAdvices.map(({ id, advice }) => (
                                     <SwiperSlide className="swiper-slide" key={id}>
-                                        <p> </p>
                                         <AdviceForm adviceText={advice} />
                                     </SwiperSlide>
                                 ))}
