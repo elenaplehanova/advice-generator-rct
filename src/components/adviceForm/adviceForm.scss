@@ -1,0 +1,43 @@
+:root {
+    --typewriter-characters: 30;
+}
+
+.advice-form {
+    position: absolute;
+
+    &__text {
+        position: relative;
+        width: max-content;
+        color: black;
+        font-family: monospace;
+        overflow: hidden;
+        white-space: nowrap;
+        letter-spacing: 0.15em;
+        border-right: 0.15em solid black;
+
+        &_typing {
+            animation: typewriter calc(var(--typewriter-characters) / 8.57 * 1s)
+                    steps(var(--typewriter-characters), end),
+                blink-caret 0.8s step-end infinite;
+        }
+    }
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black;
+    }
+}
