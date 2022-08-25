@@ -40,13 +40,17 @@ const SearchAdviceFormLazyComponent = () => {
                     type="search"
                     placeholder="Type a word..."
                     value={searchQuery}
+                    autoFocus
+                    required
                     onChange={(e) => {
                         setSearchQuery(e.currentTarget.value);
                     }}
                 />
-                <button className="search-advice__button" type="submit" onClick={handleSubmit}>
-                    Search
-                </button>
+                <button
+                    className="search-advice__button"
+                    type="submit"
+                    onClick={handleSubmit}
+                ></button>
             </form>
 
             {isSearched ? (

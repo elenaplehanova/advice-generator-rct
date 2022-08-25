@@ -17,7 +17,7 @@ const Main = () => {
             <Tabs>
                 <TabList>
                     <Tab>Random advice</Tab>
-                    <Tab>Search Advice</Tab>
+                    <Tab>Search advice</Tab>
                 </TabList>
 
                 <TabPanel>
