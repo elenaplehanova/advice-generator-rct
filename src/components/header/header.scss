@@ -5,16 +5,15 @@
 }
 
 .title {
-    font-size: 34px;
-    font-weight: 700;
+    font-size: var(--fs-600);
+    font-weight: var(--fw-bold);
     text-transform: uppercase;
-    letter-spacing: 8.95px;
+    letter-spacing: 0.35rem;
 
     &::after {
         content: "";
-        height: 1px;
-        left: 50%;
-        background-color: #000;
         display: block;
+        height: 1px;
+        background-color: var(--clr-primary-900);
     }
 }

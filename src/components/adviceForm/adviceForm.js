@@ -17,7 +17,7 @@ const AdviceForm = ({ adviceText }) => {
 
     return (
         <div className="advice-form">
-            <p className="advice-form__text">{adviceText}</p>
+            <p className="advice-form__text text-primary-900">{adviceText}</p>
         </div>
     );
 };
