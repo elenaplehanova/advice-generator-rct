@@ -55,7 +55,11 @@ const SearchAdviceFormLazyComponent = () => {
 
             {isSearched ? (
                 <div className="search-results">
-                    {message && <p className="search-results__error-message">{message} </p>}
+                    {message && (
+                        <p className="search-results__error-message">
+                            {":("} {message} {":("}
+                        </p>
+                    )}
                     <div className="swiper-container">
                         <Swiper
                             className="swiper"

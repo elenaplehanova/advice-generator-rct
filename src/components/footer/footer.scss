@@ -1,20 +1,19 @@
 .footer {
-    margin-top: auto;
-
     &__text {
         text-align: center;
     }
 }
 
 .text {
-    font-family: "FakeReceipt-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-200);
+    text-transform: uppercase;
 
     &::before {
         content: "";
-        height: 1px;
-        left: 50%;
-        background-color: #000;
         display: block;
+        height: 1px;
+        background-color: var(--clr-primary-900);
     }
 
     a {
@@ -24,25 +23,25 @@
     }
 
     a:link {
-        color: #4f49a8;
+        color: var(--clr-primary-800);
     }
 
     a:visited {
-        color: #9390c1;
+        color: var(--clr-primary-600);
     }
 
     a:focus {
         border-bottom: 1px solid;
-        background: #c7c4ff;
+        background: var(--clr-primary-400);
     }
 
     a:hover {
         border-bottom: 1px solid;
-        background: #dedcff;
+        background: var(--clr-primary-200);
     }
 
     a:active {
-        background: #5b5a76;
-        color: #dddcfb;
+        background: var(--clr-primary-700);
+        color: var(--clr-primary-100);
     }
 }

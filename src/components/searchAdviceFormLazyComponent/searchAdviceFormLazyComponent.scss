@@ -1,20 +1,16 @@
 :root {
-    --color-brand: #c7c4ff;
-    --color-dark: #2f2f2f;
-    --color-light: #fff;
-    --color-inactive: gray;
     --radius: 0.7rem;
     --btn-width: 6rem;
 
-    --swiper-theme-color: var(--color-brand);
-    --swiper-pagination-bullet-inactive-color: var(--color-inactive);
+    --swiper-theme-color: var(--clr-primary-400);
+    --swiper-pagination-bullet-inactive-color: var(--clr-primary-700);
 }
 
 .search-advice {
     &__form {
         position: relative;
         width: 33rem;
-        background: var(--color-brand);
+        background: var(--clr-primary-400);
         border-radius: var(--radius);
     }
 
@@ -22,22 +18,23 @@
     &__button {
         height: 2rem;
         border: 0;
-        color: var(--color-dark);
-        font-size: 0.8rem;
+        color: var(--clr-primary-900);
+
+        font-family: var(--ff-primary);
+        font-size: var(--fs-200);
     }
 
     &__input {
+        position: relative;
         width: 100%;
-        background: var(--color-light);
         padding: 0 1.6rem;
         border-radius: var(--radius);
         transition: all 0.7s cubic-bezier(0, 0, 0.43, 1.49);
-        position: relative;
-        border: 1px solid var(--color-dark);
+        border: 1px solid var(--clr-primary-900);
     }
 
     &__input:focus-visible {
-        outline: var(--color-brand) auto 1px;
+        outline: var(--clr-primary-400) auto 1px;
     }
 
     &__input:not(:placeholder-shown) {
@@ -58,7 +55,8 @@
         top: 0;
         right: 0;
         width: var(--btn-width);
-        background: var(--color-brand);
+
+        background: var(--clr-primary-400);
         border-radius: 0 var(--radius) var(--radius) 0;
         cursor: pointer;
     }
@@ -78,6 +76,12 @@
 
 .search-results {
     &__error-message {
+        font-family: var(--ff-primary);
+        font-size: var(--fs-400);
+        color: var(--clr-primary-800);
+        text-transform: lowercase;
+
+        margin: 10px;
     }
 }
 

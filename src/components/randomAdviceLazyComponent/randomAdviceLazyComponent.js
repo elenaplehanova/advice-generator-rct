@@ -14,12 +14,8 @@ const RandomAdviceLazyComponent = () => {
     }, []);
 
     return (
-        <div>
-            {randomAdvice ? (
-                <AdviceForm className="advice-form" adviceText={randomAdvice} />
-            ) : (
-                <Loader />
-            )}
+        <div className="random-advice">
+            {randomAdvice ? <AdviceForm adviceText={randomAdvice} /> : <Loader />}
         </div>
     );
 };
