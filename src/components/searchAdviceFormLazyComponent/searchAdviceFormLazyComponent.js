@@ -17,17 +17,19 @@ const SearchAdviceFormLazyComponent = () => {
     const [message, setMessage] = useState("");
 
     const handleSubmit = (e) => {
-        setIsSearched(false);
-        setTimeout(() => {
-            ApiService.getData(`https://api.adviceslip.com/advice/search/${searchQuery}`).then(
-                (data) => {
-                    data.message ? setMessage(data.message.text) : setMessage("");
-                    data.slips ? setFoundAdvices(data.slips) : setFoundAdvices([]);
+        if (searchQuery) {
+            setIsSearched(false);
+            setTimeout(() => {
+                ApiService.getData(`https://api.adviceslip.com/advice/search/${searchQuery}`).then(
+                    (data) => {
+                        data.message ? setMessage(data.message.text) : setMessage("");
+                        data.slips ? setFoundAdvices(data.slips) : setFoundAdvices([]);
 
-                    setIsSearched(true);
-                }
-            );
-        }, 1000);
+                        setIsSearched(true);
+                    }
+                );
+            }, 1000);
+        }
 
         e.preventDefault();
     };
