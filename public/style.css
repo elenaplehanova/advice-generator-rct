@@ -1,6 +1,7 @@
 :root {
     --clr-primary-100: hsl(243, 3%, 95%);
-    --clr-primary-200: hsl(243, 100%, 93%);
+    --clr-primary-200: hsl(244, 50%, 93%);
+    --clr-primary-300: hsl(243, 100%, 93%);
     --clr-primary-400: hsl(243, 100%, 88%);
     --clr-primary-600: hsl(243, 28%, 66%);
     --clr-primary-700: hsl(243, 5%, 66%);

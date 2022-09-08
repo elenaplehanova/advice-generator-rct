@@ -6,15 +6,18 @@
 .advice-form {
     &__text {
         font-family: var(--ff-body);
-        letter-spacing: 0.1em;
-        white-space: nowrap;
 
-        overflow: hidden;
-        border-right: 0.15em solid var(--caret-color);
+        color: #0000;
+        background: linear-gradient(-90deg, var(--clr-primary-900) 2px, #0000 0) 0 0,
+            linear-gradient(var(--clr-primary-900) 0 0) 0 0;
+        background-size: calc(var(--typewriter-characters) * 1ch) 200%;
+        -webkit-background-clip: padding-box, text;
+        background-clip: padding-box, text;
+        background-repeat: no-repeat;
 
         &_typing {
             animation: typewriter calc(var(--typewriter-characters) / 8.57 * 1s)
-                    steps(var(--typewriter-characters), end),
+                    steps(var(--typewriter-characters)) forwards,
                 blink-caret 0.8s step-end infinite;
         }
     }
@@ -22,19 +25,11 @@
 
 @keyframes typewriter {
     from {
-        width: 0;
-    }
-    to {
-        width: 100%;
+        background-size: 0 200%;
     }
 }
-
 @keyframes blink-caret {
-    from,
-    to {
-        border-color: transparent;
-    }
     50% {
-        border-color: var(--caret-color);
+        background-position: 0 -100%, 0 0;
     }
 }

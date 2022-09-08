@@ -21,12 +21,24 @@ const Main = () => {
                 </TabList>
 
                 <TabPanel>
-                    <Suspense fallback={<Loader />}>
+                    <Suspense
+                        fallback={
+                            <div className="suspense__loader">
+                                <Loader />
+                            </div>
+                        }
+                    >
                         <RandomAdviceLazyComponent />
                     </Suspense>
                 </TabPanel>
                 <TabPanel>
-                    <Suspense fallback={<Loader />}>
+                    <Suspense
+                        fallback={
+                            <div className="suspense__loader">
+                                <Loader />
+                            </div>
+                        }
+                    >
                         <SearchAdviceFormLazyComponent />
                     </Suspense>
                 </TabPanel>

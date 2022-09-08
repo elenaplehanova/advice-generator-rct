@@ -34,6 +34,17 @@ const SearchAdviceFormLazyComponent = () => {
         e.preventDefault();
     };
 
+    const slideChange = (swiper) => {
+        let textSwiperSlides = document.querySelectorAll(".advice-form__text");
+        let textActiveSlide = textSwiperSlides[swiper.activeIndex];
+        if (textActiveSlide) {
+            textActiveSlide.classList.remove("advice-form__text_typing");
+            setTimeout(() => {
+                textActiveSlide.classList.add("advice-form__text_typing");
+            }, 100);
+        }
+    };
+
     return (
         <div className="search-advice">
             <form className="search-advice__form">
@@ -62,31 +73,35 @@ const SearchAdviceFormLazyComponent = () => {
                             {":("} {message} {":("}
                         </p>
                     )}
-                    <div className="swiper-container">
-                        <Swiper
-                            className="swiper"
-                            slidesPerView={1}
-                            spaceBetween={30}
-                            keyboard={{
-                                enabled: true,
-                            }}
-                            pagination={{
-                                clickable: true,
-                            }}
-                            navigation={true}
-                            modules={[Keyboard, Pagination, Navigation]}
-                        >
-                            {foundAdvices &&
-                                foundAdvices.map(({ id, advice }) => (
-                                    <SwiperSlide className="swiper-slide" key={id}>
-                                        <AdviceForm adviceText={advice} />
-                                    </SwiperSlide>
-                                ))}
-                        </Swiper>
-                    </div>
+                    <Swiper
+                        slidesPerView={1}
+                        spaceBetween={30}
+                        keyboard
+                        pagination={{
+                            clickable: true,
+                            dynamicBullets: true,
+                        }}
+                        navigation={true}
+                        modules={[Keyboard, Pagination, Navigation]}
+                        onSlideChange={(swiper) => slideChange(swiper)}
+                    >
+                        {foundAdvices &&
+                            foundAdvices.map(({ id, advice }) => (
+                                <SwiperSlide key={id}>
+                                    <div className="swiper__advice-form">
+                                        <AdviceForm
+                                            className="swiper__advice-form"
+                                            adviceText={advice}
+                                        />
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                    </Swiper>
                 </div>
             ) : (
-                <Loader />
+                <div className="search-advice__loader">
+                    <Loader />
+                </div>
             )}
         </div>
     );
