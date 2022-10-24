@@ -29,9 +29,7 @@
     &__button {
         height: 2rem;
         border: 0;
-        color: var(--clr-primary-900);
 
-        font-family: var(--ff-primary);
         font-size: var(--fs-200);
     }
 
@@ -87,8 +85,6 @@
 
 .search-results {
     &__error-message {
-        font-family: var(--ff-primary);
-        font-size: var(--fs-400);
         color: var(--clr-primary-800);
         text-transform: lowercase;
 
