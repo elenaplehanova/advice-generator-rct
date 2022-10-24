@@ -3,7 +3,7 @@ import "./header.scss";
 const Header = () => {
     return (
         <header>
-            <div className="header__title title text-primary-900">Your Adviser</div>
+            <h1 className="fs-600 fw-bold header__title title">Your Adviser</h1>
         </header>
     );
 };

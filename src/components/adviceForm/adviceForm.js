@@ -4,7 +4,7 @@ const AdviceForm = ({ adviceText }) => {
     return (
         <div className="advice-form">
             <span
-                className="advice-form__text text-primary-900 advice-form__text_typing"
+                className="ff-mono advice-form__text advice-form__text_typing"
                 style={{ "--typewriter-characters": `${adviceText.length}` }}
             >
                 {adviceText}
