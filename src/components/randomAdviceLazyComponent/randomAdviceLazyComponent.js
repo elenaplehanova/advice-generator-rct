@@ -11,7 +11,7 @@ const RandomAdviceLazyComponent = () => {
         ApiService.getData("https://api.adviceslip.com/advice").then((data) => {
             setRandomAdvice(data.slip.advice);
         });
-    }, []);
+    }, [randomAdvice]);
 
     return (
         <div className="random-advice">
