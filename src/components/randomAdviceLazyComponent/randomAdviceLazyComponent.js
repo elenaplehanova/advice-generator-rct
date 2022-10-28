@@ -8,7 +8,7 @@ import "./randomAdviceLazyComponent.scss";
 const RandomAdviceLazyComponent = () => {
     const [randomAdvice, setRandomAdvice] = useState();
     useEffect(() => {
-        ApiService.getData("https://api.adviceslip.com/advice").then((data) => {
+        ApiService.getRandomAdvice().then((data) => {
             setRandomAdvice(data.slip.advice);
         });
     }, [randomAdvice]);
